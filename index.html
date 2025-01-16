@@ -104,6 +104,19 @@
         -webkit-text-fill-color: transparent; /* Hides the fill, showing only the gradient */
         animation: rainbow 3s infinite; /* Applies the animation */
         }
+
+        .rainbow-text-small {
+        font-size: 1.0rem; /* Adjust font size as needed */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Optional: make text pop against the background */
+        font-weight: bold; /* Optional: make the text bold */
+        text-align: center; /* Center the text */
+        background-image: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+        background-size: 400%; /* Makes the gradient larger for smooth animation */
+        background-clip: text; /* Standard property */
+        -webkit-background-clip: text; /* WebKit-specific for older browsers */
+        -webkit-text-fill-color: transparent; /* Hides the fill, showing only the gradient */
+        animation: rainbow 3s infinite; /* Applies the animation */
+        }
         
 
         /* Keyframes for the rainbow effect */
@@ -190,7 +203,7 @@ header.banner {
 
 
     <nav>
-        <a class="rainbow-text" href="#gigs">gigs</a>
+        <a class="rainbow-text-small" href="#gigs">gigs</a>
         <a href="#spotify">streaming services</a>
         <a href="#radio">radio features</a>
         <a href="#gallery">gallery</a>

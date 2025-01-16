@@ -170,27 +170,42 @@
 .mosaic-item:hover .image-label {
     opacity: 1;  /* Show the label when hovering over the image */
 }
-header.banner p {
-    font-size: 1.2rem;
-    margin: 0.5rem 0 0;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+/* Reset default margin/padding */
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent scrolling caused by animation */
+    font-family: Arial, sans-serif;
 }
 
 header.banner {
     position: relative;
     height: 300px; /* Adjust as needed */
-    background-image: url('IMG_4185.JPG'); /* Replace with your image path */
-    background-size: cover; /* Ensures the image covers the entire area */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents tiling */
-    color: white; /* Ensures text is readable */
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 0 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add a subtle shadow below */
+    color: white; /* Text color */
+    overflow: hidden;
+    z-index: 1;
+}
+
+header.banner h1,
+header.banner p {
+    position: relative; /* Ensures text stays above the animation */
+    z-index: 2;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Optional: Text readability */
+}
+
+header.banner::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background
+
 }
     </style>
 </head>

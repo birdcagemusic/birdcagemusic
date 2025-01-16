@@ -94,6 +94,7 @@
         
         .rainbow-text {
         font-size: 2.5rem; /* Adjust font size as needed */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Optional: make text pop against the background */
         font-weight: bold; /* Optional: make the text bold */
         text-align: center; /* Center the text */
         background-image: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
@@ -156,13 +157,37 @@
 .mosaic-item:hover .image-label {
     opacity: 1;  /* Show the label when hovering over the image */
 }
+header.banner p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+header.banner {
+    position: relative;
+    height: 300px; /* Adjust as needed */
+    background-image: url('IMG_4185.JPG'); /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    color: white; /* Ensures text is readable */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add a subtle shadow below */
+}
     </style>
 </head>
 <body>
-    <header>
+    <header class="banner">
         <h1 class="rainbow-text">birdcage, sydney australia</h1>
         <p>DIY on Eora Nation's Kuring-gai land</p>
     </header>
+</body>
+
 
     <nav>
         <a href="#gigs">gigs</a>

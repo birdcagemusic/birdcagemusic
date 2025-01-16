@@ -78,6 +78,24 @@
         padding: 1rem; /* Optional: add padding for better spacing inside the section */
         text-align: left; /* Ensure the text aligns naturally */
         }
+        .rainbow-text {
+        font-size: 2.5rem; /* Adjust font size as needed */
+        font-weight: bold; /* Optional: make the text bold */
+        text-align: center; /* Center the text */
+        background-image: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+        background-size: 400%; /* Makes the gradient larger for smooth animation */
+        background-clip: text; /* Standard property */
+        -webkit-background-clip: text; /* WebKit-specific for older browsers */
+        -webkit-text-fill-color: transparent; /* Hides the fill, showing only the gradient */
+        animation: rainbow 3s infinite; /* Applies the animation */
+        }
+
+        /* Keyframes for the rainbow effect */
+        @keyframes rainbow {
+        0% { background-position: 0%; }
+        50% { background-position: 100%; }
+        100% { background-position: 0%; }
+        }
     </style>
 </head>
 <body>

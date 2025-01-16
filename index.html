@@ -111,6 +111,51 @@
         50% { background-position: 100%; }
         100% { background-position: 0%; }
         }
+        
+        .mosaic-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  /* Mosaic-style grid */
+    gap: 1rem;
+    justify-items: center;
+    margin-top: 2rem;
+}
+
+.mosaic-item {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.mosaic-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Ensure images cover their container */
+    transition: transform 0.3s ease;
+}
+
+.mosaic-item:hover img {
+    transform: scale(1.1);  /* Zoom effect on hover */
+}
+
+.image-label {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.mosaic-item:hover .image-label {
+    opacity: 1;  /* Show the label when hovering over the image */
+}
     </style>
 </head>
 <body>
@@ -147,12 +192,26 @@
         <h2>live gigs</h2>
         <p>check out my latest performances, a short video and some photos below:</p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/sample-video-id" frameborder="0" allowfullscreen></iframe>
-        <div class="gallery">
+    
+    <section id="mosaic-gallery" class="centered-section">
+    <h2>Mosaic Image Wall</h2>
+    <div class="mosaic-container">
+        <div class="mosaic-item">
             <img src="IMG_5622.JPG" alt="Lazy Thinking First Gig">
-            <img src="IMG_4195.jpg" alt="InMortality">
-            <img src="photo3.jpg" alt="">
+            <div class="image-label">Description of Image 1</div>
         </div>
+        <div class="mosaic-item">
+            <img src="IMG_4195.jpg" alt="InMortality">
+            <div class="image-label">Description of Image 2</div>
+        </div>
+        <div class="mosaic-item">
+            <img src="images/photo3.jpg" alt="Image 3">
+            <div class="image-label">Description of Image 3</div>
+        </div>
+        <!-- Add more images as needed -->
+    </div>
     </section>
+
 
     <section id="radio" class="centered-section">
         <h2>radio features</h2>

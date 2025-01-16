@@ -170,43 +170,45 @@
 .mosaic-item:hover .image-label {
     opacity: 1;  /* Show the label when hovering over the image */
 }
-header.banner {
-    position: relative;
-    height: 300px;
+position: relative;
+    height: 100vh; /* Make the header cover the full viewport height */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: white;
+    color: white; /* Text color */
     overflow: hidden;
     z-index: 1;
 }
 
 header.banner h1,
 header.banner p {
-    position: relative;
+    position: relative; /* Ensures text stays above the animation */
     z-index: 2;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Optional: Text readability */
 }
 
 header.banner::before {
     content: '';
     position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300%; /* Increase size to fully cover the screen while rotating */
+    height: 300%; /* Keep proportional to width */
     background: conic-gradient(black, white, black, white);
-    animation: spin 5s linear infinite;
-    z-index: 1;
+    animation: spin 5s linear infinite; /* Adjust speed as needed */
+    z-index: 1; /* Spiral stays behind the text */
+    border-radius: 50%; /* Optional: makes the animation circular */
 }
 
+/* Spiral Animation */
 @keyframes spin {
     0% {
-        transform: rotate(0deg);
+        transform: translate(-50%, -50%) rotate(0deg);
     }
     100% {
-        transform: rotate(360deg);
+        transform: translate(-50%, -50%) rotate(360deg);
     }
 }
 

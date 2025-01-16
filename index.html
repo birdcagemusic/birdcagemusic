@@ -170,57 +170,6 @@
 .mosaic-item:hover .image-label {
     opacity: 1;  /* Show the label when hovering over the image */
 }
-position: relative;
-    height: 100vh; /* Make the header cover the full viewport height */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white; /* Text color */
-    overflow: hidden;
-    z-index: 1;
-}
-
-header.banner h1,
-header.banner p {
-    position: relative; /* Ensures text stays above the animation */
-    z-index: 2;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Optional: Text readability */
-}
-
-header.banner::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 300%; /* Increase size to fully cover the screen while rotating */
-    height: 300%; /* Keep proportional to width */
-    background: conic-gradient(black, white, black, white);
-    animation: spin 5s linear infinite; /* Adjust speed as needed */
-    z-index: 1; /* Spiral stays behind the text */
-    border-radius: 50%; /* Optional: makes the animation circular */
-}
-
-/* Spiral Animation */
-@keyframes spin {
-    0% {
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-    100% {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
-}
-
-.rainbow-text {
-    font-size: 2.5rem;
-    margin: 0;
-}
-
-header.banner p {
-    margin: 0.5rem 0 0;
-    font-size: 1.2rem;
-}
     </style>
 </head>
 <body>

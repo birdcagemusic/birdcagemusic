@@ -78,6 +78,20 @@
         padding: 1rem; /* Optional: add padding for better spacing inside the section */
         text-align: left; /* Ensure the text aligns naturally */
         }
+        @media (max-width: 768px) { /* Targets tablets and phones */
+    .centered-section {
+        max-width: 90%; /* Adjust the width for smaller screens */
+        padding: 1rem; /* Optionally adjust padding for better spacing */
+             }
+        }
+
+        @media (max-width: 480px) { /* Targets very small screens like iPhones in portrait mode */
+    .centered-section {
+        max-width: 95%; /* Make the section almost full width */
+        padding: 0.5rem; /* Adjust padding for smaller screens */
+             }
+        }
+        
         .rainbow-text {
         font-size: 2.5rem; /* Adjust font size as needed */
         font-weight: bold; /* Optional: make the text bold */
@@ -89,6 +103,7 @@
         -webkit-text-fill-color: transparent; /* Hides the fill, showing only the gradient */
         animation: rainbow 3s infinite; /* Applies the animation */
         }
+        
 
         /* Keyframes for the rainbow effect */
         @keyframes rainbow {

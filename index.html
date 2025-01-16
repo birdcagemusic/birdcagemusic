@@ -111,7 +111,7 @@
         50% { background-position: 100%; }
         100% { background-position: 0%; }
         }
-        
+
         .mosaic-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  /* Mosaic-style grid */
@@ -194,15 +194,14 @@
         <iframe width="560" height="315" src="https://www.youtube.com/embed/sample-video-id" frameborder="0" allowfullscreen></iframe>
     
     <section id="mosaic-gallery" class="centered-section">
-    <h2>Mosaic Image Wall</h2>
     <div class="mosaic-container">
         <div class="mosaic-item">
             <img src="IMG_5622.JPG" alt="Lazy Thinking First Gig">
-            <div class="image-label">Description of Image 1</div>
+            <div class="image-label">InMortality's first gig at Lazy Thinking, Dulwich Hill</div>
         </div>
         <div class="mosaic-item">
-            <img src="IMG_4195.jpg" alt="InMortality">
-            <div class="image-label">Description of Image 2</div>
+            <img src="IMG_4195.JPG" alt="InMortality">
+            <div class="image-label">"Bottles" music video</div>
         </div>
         <div class="mosaic-item">
             <img src="images/photo3.jpg" alt="Image 3">
@@ -230,11 +229,23 @@
     <section id="gallery" class="centered-section">
         <h2>gallery</h2>
         <p>some of the work we've done, music videos, album covers, and extra photos:</p>
-        <div class="gallery">
-            <img src="KFUFL4EVA.png" alt="Album Cover">
-            <img src="photo2.jpg" alt="Live Performance">
-            <img src="photo3.jpg" alt="Studio Session">
-        </div>
+        <section id="mosaic-gallery" class="centered-section">
+            <div class="mosaic-container">
+                <div class="mosaic-item">
+                    <img src="KFUFL4EVA.png" alt="Lazy Thinking First Gig">
+                    <div class="image-label">KFUFL album cover</div>
+                </div>
+                <div class="mosaic-item">
+                    <img src="IMG_4195.JPG" alt="InMortality">
+                    <div class="image-label">"Bottles" music video</div>
+                </div>
+                <div class="mosaic-item">
+                    <img src="images/photo3.jpg" alt="Image 3">
+                    <div class="image-label">Description of Image 3</div>
+                </div>
+                <!-- Add more images as needed -->
+            </div>
+            </section>
     </section>
 
     <section id="spotify" class="centered-section">

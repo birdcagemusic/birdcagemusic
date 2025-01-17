@@ -171,44 +171,40 @@
     opacity: 1;  /* Show the label when hovering over the image */
 }
 
-/* Fixed left banner */
 .banner-left {
     position: fixed;
     top: 0;
     left: 0;
     width: 100px; /* Adjust width as needed */
     height: 100%; /* Full height of the viewport */
-    background-color: #333; /* Adjust background color */
-    color: white; /* Banner text color */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
+    background-color: #333; /* Fallback color */
     z-index: 1000; /* Ensure it stays on top */
-    padding: 1rem;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Optional: Shadow for visual effect */
-    overflow-y: auto; /* Add scroll if content exceeds height */
+    overflow: hidden; /* Crop overflowing image */
 }
 
-/* Fixed right banner */
 .banner-right {
     position: fixed;
     top: 0;
     right: 0;
     width: 100px; /* Adjust width as needed */
     height: 100%; /* Full height of the viewport */
-    background-color: #333; /* Adjust background color */
-    color: white; /* Banner text color */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
+    background-color: #333; /* Fallback color */
     z-index: 1000; /* Ensure it stays on top */
-    padding: 1rem;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* Optional: Shadow for visual effect */
-    overflow-y: auto; /* Add scroll if content exceeds height */
+    overflow: hidden; /* Crop overflowing image */
+}
+
+.banner-left img,
+.banner-right img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; /* Ensure the image fills the width */
+    height: auto; /* Maintain aspect ratio */
+    min-height: 100%; /* Cover the height of the banner */
+    min-width: 100%; /* Cover the width of the banner */
 }
 
 /* Ensure main content is not hidden behind the banners */
